@@ -1,0 +1,20 @@
+services:
+  arcana-zk-protocol:
+    build: .
+    image: "docker.io/4nibhal/arcana-zk-protocol"
+    platform: linux/amd64
+    ports:
+      - "8000:8000"
+    environment:
+      - LOG_LEVEL=INFO
+      - PORT=8000
+    volumes:
+      - /storage/circuits:/app/circuits
+      - /storage/contracts:/app/contracts
+      - /storage/proofs:/app/proofs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s 

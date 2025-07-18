@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+toml
+pydantic
+web3
+eth-account 
+requests 

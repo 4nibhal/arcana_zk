@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arcana-zk-sdk"
+version = "1.0.0"
+description = "Minimal SDK for Arcana ZK Protocol API"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Arcana Team", email = "team@arcana-zk.com"}
+]
+maintainers = [
+    {name = "Arcana Team", email = "team@arcana-zk.com"}
+]
+keywords = ["zk", "zero-knowledge", "blockchain", "sapphire", "noir"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Security :: Cryptography",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.25.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black>=21.0",
+    "mypy>=0.900",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/arcana-zk/arcana-zk-sdk"
+Documentation = "https://github.com/arcana-zk/arcana-zk-sdk#readme"
+Repository = "https://github.com/arcana-zk/arcana-zk-sdk"
+Issues = "https://github.com/arcana-zk/arcana-zk-sdk/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["arcana_sdk*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.ruff]
+line-length = 88
+target-version = "py39" 

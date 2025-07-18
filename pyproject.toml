@@ -1,0 +1,22 @@
+[project]
+name = "noir-generator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aionotify>=0.3.1",
+    "eth-abi>=5.2.0",
+    "eth-account>=0.13.7",
+    "fastapi>=0.116.1",
+    "oasis-sapphire-py>=0.4.0",
+    "pathlib>=1.0.1",
+    "pydantic>=2.11.7",
+    "pytest>=8.4.1",
+    "python-multipart>=0.0.20",
+    "requests>=2.32.4",
+    "toml>=0.10.2",
+    "typing-extensions>=4.14.1",
+    "uvicorn>=0.35.0",
+    "web3>=7.12.1",
+]
