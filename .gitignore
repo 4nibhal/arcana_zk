@@ -46,14 +46,6 @@ temp/
 Thumbs.db
 ._*
 
-# Project-specific (ZK/Blockchain)
-circuits/
-proofs/
-*.key
-*.pem
-*.p12
-*.pfx
-
 # Noir
 target/
 *.nr.bk
